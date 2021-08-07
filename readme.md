@@ -1,5 +1,5 @@
 # Boulder Beat Quiz App
-Trying to create a quiz to match voters with candidates based on policy not people.
+Trying to create a quiz to match voters with candidates based on policy not politics.
 
 Next steps:
     1. Get answer selection method working
