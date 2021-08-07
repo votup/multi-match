@@ -11,10 +11,10 @@ class CandidateAdmin(admin.ModelAdmin):
 
 @admin.register(Response)
 class ResponseAdmin(admin.ModelAdmin):
-    list_display = ('question_id', 'candidate', 'response', 'description')
+    list_display = ('question_id', 'response')
 
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ('number', 'question',)
+    list_display = ('number', 'question', 'description')
 

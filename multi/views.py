@@ -7,7 +7,8 @@ from .models import Candidate, Question, Response, Voter
 def index(request):
   candidate_list = Candidate.objects.all()
   question_list = Question.objects.all().order_by('number')
-  response_list = Response.objects.all().order_by('description', 'response')
+  response_list = Response.objects.all().order_by('response')
+  description_list = Question.objects.all().order_by('description')
   template_name = 'multi/index.html'
   context = {
     'candidate_list': candidate_list,

@@ -23,6 +23,7 @@
        <!-- question -->
        <div class="card-question">
            <h2>{{ question.topic|safe }}</h2>
+           <p>{{question.description|safe}}</p>
            <p id="question.number" data-id="{{ question.number }}">
                <strong>{{ question|safe }}</strong>
            </p>
