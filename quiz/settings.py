@@ -10,7 +10,7 @@ environ.Env.read_env(str(env_file))
 
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,7 @@ WSGI_APPLICATION = 'quiz.wsgi.application'
 #     }
 # }
 
-DATABASES = {}
+DATABASES = {} 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
@@ -90,7 +91,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Denver'
 
 USE_I18N = True
 
