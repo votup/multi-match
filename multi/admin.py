@@ -7,7 +7,7 @@ from .models import Candidate, Question, Response
 
 @admin.register(Candidate)
 class CandidateAdmin(admin.ModelAdmin):
-    list_display = ('full_name', 'age')
+    list_display = ('full_name', 'cand_link')
 
 @admin.register(Response)
 class ResponseAdmin(admin.ModelAdmin):
