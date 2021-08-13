@@ -34,6 +34,7 @@ class Response(models.Model):
 class Candidate(models.Model):
     f_name = models.CharField(max_length=100)
     l_name = models.CharField(max_length=100)
+    profile_photo = models.ImageField(upload_to='survey/', blank=True, null=True)
     cand_link = models.URLField(max_length=200, blank=True, null=True)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     cand_response = models.ForeignKey(Response, on_delete=models.CASCADE)
