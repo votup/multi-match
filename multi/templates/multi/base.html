@@ -1,23 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+
+  <!-- Cocobits CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/cocobits/dist/css/cocobits.min.css">
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2LHDP9" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Header -->
+  <header class="bg-red-100">
+    <div class="px-3 container-md">this is the header</div>
+  </header>
+  <!-- Main -->
+  <main>
+    {% block body %}{% endblock %}
+  </main>
 
-<div class="header">
-    <div class="container header-container">
-    </div>
-</div>
+  <!-- Footer -->
+  <footer class="d-self-flex-end bottom-0 bg-blue-100">
+    <div class="px-3 position-relative container-md">this is the footer</div>
+  </footer>
 
-<!-- main -->
-{% block body %}{% endblock %}
-
-
-
+  <!-- Custom JS -->
+  {% block script %}
+  <script src="{% static 'js/index.js' %}"></script>
+  {% endblock %}
 </body>
+
 </html>
