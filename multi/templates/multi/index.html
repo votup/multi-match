@@ -17,7 +17,7 @@
         The id="question.number" uses a '.' 
         Was this intentional? 
        -->
-      <h3 id="question.number" data-id="{{ question.number }}">{{ question|safe }}</h3>
+      <h3 id="questionNumber" data-id="{{ question.number }}">{{ question|safe }}</h3>
     </div>
 
     <!-- responses -->
@@ -36,7 +36,7 @@
     <div>
       {% for response in response_list %}
       {% if question.number == response.response_id %}
-      <div id="responseDetail" data-response="{{ response.response_id" data-candidate="{{ response.candidate_id }}">
+      <div id="responseDetail" data-response="{{ response.response_id}}" data-candidate="{{ response.candidate_id }}">
         <div>
           {% if response %}
           <h6>{{ response.description_heading }}</h6>
