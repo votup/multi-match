@@ -25,8 +25,8 @@
       {% for response in response_list %}
       {% if question.number == response.question_id %}
       <div id="candidateResponse" class="bg-gray-100" value="{{ response.response|safe }}"
-        data-response="{{ response.response_id }}" data-candidate="{{ response.candidate_id }}">{{
-        response.response|safe }}
+        data-response="{{ response.response_id }}" data-candidate="{{ response.candidate_id }}">
+        <p>{{response.response|safe }} </p>
       </div>
       {% endif %}
       {% endfor %}
